@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:///testdb?TC_IMAGE_TAG=15-alpine
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.yaml

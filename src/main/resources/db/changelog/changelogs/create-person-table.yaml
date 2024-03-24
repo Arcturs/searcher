@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      author: a.sashina
+      id: 01-create-person-table
+      changes:
+        - sql:
+            sql: >-
+              create table if not exists person(
+              id bigint primary key,
+              first_name varchar(100) not null,
+              second_name varchar(100) not null,
+              middle_name varchar(100))
+        - sql:
+            sql: create index person_first_name_index ON person(first_name)
+        - sql:
+            sql: create index person_second_name_index ON person(second_name)
+        - sql:
+            sql: create index person_middle_name_index ON person(middle_name)

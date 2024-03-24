@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    dbname: ${DATABASE_NAME:peopledb}
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:5432/${DATABASE_NAME:peopledb}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.yaml
